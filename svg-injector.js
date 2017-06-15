@@ -186,11 +186,6 @@
     // Grab the src or data-src attribute
     var imgUrl = el.getAttribute('data-src') || el.getAttribute('src');
 
-    // We can only inject SVG
-    if (!(/\.svg/i).test(imgUrl)) {
-      callback('Attempted to inject a file with a non-svg extension: ' + imgUrl);
-      return;
-    }
 
     // If we don't have SVG support try to fall back to a png,
     // either defined per-element via data-fallback or data-png,
